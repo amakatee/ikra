@@ -52,6 +52,7 @@ export default function Home() {
 
     
     /* svg */
+    gsap.to(svgRef.current,  {opacity:1, delay:1.18})
     gsap.fromTo(svg(".i"), {x:"-150%"}, {x:0,delay:1.20})
     gsap.fromTo(svg(".i-dot"), {y:"-150%"}, {y:0, delay:1.35})
     gsap.fromTo(svg(".k"), {y:"-150%"}, {y:0,delay:1.35})
