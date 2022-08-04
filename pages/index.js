@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import gsap from 'gsap'
-import Logo from '../components/logo'
+
 import react, {useRef, useEffect, useState} from 'react'
 
 
