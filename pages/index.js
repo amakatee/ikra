@@ -57,6 +57,13 @@ export default function Home() {
     gsap.fromTo(svg(".k"), {y:"-150%"}, {y:0,delay:1.35})
     gsap.fromTo(svg(".r"), {y:"-150%"}, {y:0, delay:1.35})
     gsap.fromTo(svg(".a"), {y:"-150%"}, {y:0, delay:1.35})
+
+    gsap.fromTo(svgRef.current, {scale:1}, {scale:1.1, delay:1.5})
+    gsap.fromTo(svg(".a"), {opacity:1}, {opacity:0, delay:1.75})
+    gsap.fromTo(svg(".r"), {opacity:1}, {opacity:0, delay:1.8})
+    gsap.fromTo(svg(".k"), {opacity:1}, {opacity:0, delay:1.85})
+    gsap.fromTo(svg(".i"), {opacity:1}, {opacity:0, delay:1.9})
+    gsap.fromTo(svg(".i-dot"), {opacity:1}, {opacity:0, delay:1.9})
     
 
 
@@ -90,18 +97,18 @@ export default function Home() {
        <path className='a' d="M86.4779 10.9883L76.0465 22.4129L82.3923 7.50024H77.9587L76.979 10.1671C76.4977 8.04609 74.4226 6.88965 72.0472 6.88965C67.0924 6.88965 62.5719 11.9475 60.6591 18.4014C58.4857 25.8138 60.5722 30.0002 64.8315 30.0002C65.8745 30.0002 67.0049 29.7388 68.2216 28.9539C68.9919 28.4389 69.8563 27.6861 70.6411 26.8008L69.4389 29.6517H73.9594L89.1718 13.7799L86.4779 10.9883ZM66.658 25.9881C64.2241 25.9881 63.4417 23.0229 65.0064 18.4008C66.3975 14.3892 68.7446 11.0755 71.3523 11.0755C74.2212 11.0755 74.6555 13.8664 72.8301 18.8371C71.6997 22.0637 69.4395 25.9881 66.658 25.9881Z"></path>
     </svg>
      <div ref={firstRef} className='first-num cont-num'>
-         {arr.map(a => (
-           <h1><span>{a}</span></h1>
+         {arr.map((a,i) => (
+           <h1 key={i}><span>{a}</span></h1>
          ))}
        </div>
        <div ref={secondRef} className='second-num cont-num'>
-         {arr.map(a => (
-           <h1><span>{a}</span></h1>
+         {arr.map((a,i) => (
+           <h1 key={i}><span>{a}</span></h1>
          ))}
        </div>
        <div ref={lastRef} className='last-num cont-num'>
-         {arr.map(a => (
-           <h1><span>{a}</span></h1>
+         {arr.map((a,i) => (
+           <h1 key={i}><span>{a}</span></h1>
          ))}
        </div>
        {/* <div className='last-num cont-num'>
