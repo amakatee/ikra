@@ -14,6 +14,7 @@ export default function Home() {
 
   const svgRef =useRef()
   const [intro, setIntro] = useState(true)
+  const router = useRouter()
 
 
 
@@ -82,7 +83,7 @@ export default function Home() {
  
 
   useEffect(() => {
-    const router = useRouter()
+    
     const svg = gsap.utils.selector(svgRef)
     
     lastIter(svg)
