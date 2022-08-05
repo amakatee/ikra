@@ -1,8 +1,9 @@
 import React from 'react'
 
-const logo = () => {
+const Logo = ({fill}) => {
+  console.log(fill)
   return (
-    <svg width="90" height="30" viewBox="0 0 90 30" fill="000000" xmlns="http://www.w3.org/2000/svg">
+    <svg width="90" height="30" viewBox="0 0 90 30" fill={fill} xmlns="http://www.w3.org/2000/svg">
        <path d="M7.28332 24.5922L14.2378 7.41211H2.50224L0.9375 11.5985H8.41374L1.19809 29.6507H7.28332L16.15 21.7148L13.6291 18.6624L7.28332 24.5922Z"></path>
        <path d="M10.5 5.14557H15.2811L17.3676 0H12.4128L10.5 5.14557Z"></path>
        <path d="M43.0986 7.41245H35.9704L27.2401 14.0328L32.3192 0H27.8855L17.541 29.651H22.0615L25.3213 19.9178L30.9282 29.651H36.0573L28.6679 17.5287L43.0986 7.41245Z"></path>
@@ -12,4 +13,4 @@ const logo = () => {
   )
 }
 
-export default logo
+export default Logo

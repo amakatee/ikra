@@ -1,8 +1,14 @@
+@import 'mixins';
+
 @font-face {
   font-family: neuelight;
   src: url('/assets/fonts/neue-light.ttf');
 }
 
+$backblue: #6782b4;
+$babyblue: #B8D3FE;
+$darkbkue: #29539B;
+$bluewhite: #F5F7FA;
 
 html,
 body {
@@ -21,33 +27,21 @@ a {
   box-sizing: border-box;
 }
 
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 8vh;
+  padding-block: 1.5rem;
+}
 .home {
   width: 100vw;
   height: 100vh;
-  background-color: #000000;
+  background-color: $backblue;
   display: grid;
   place-content: center;
   
-  .home-count {
-    display: flex;
-    overflow: hidden;
-    height: 4rem;
-    position: relative;
-
-   
-
-
-    h1 {
-      font-family: neuelight;
-      font-weight: 300;
-      font-size: 1.5rem;
-      overflow: hidden;
-     
-      
-    }
   
-    
-  }
 }
 
 .span {
@@ -79,11 +73,6 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-
-
- 
-
   
   h1 {
  
@@ -91,12 +80,10 @@ a {
     font-size:2rem;
     line-height: 1.36;
     font-weight: 300;
-    color: #ffffff;
-
-
-
-    span {
-      padding: .1rem;
+    color:$babyblue;
+  
+  span {
+    padding: .1rem;
  
 
     
@@ -104,3 +91,75 @@ a {
   }
  
 }
+
+.auth-options {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: start;
+ 
+  gap: 1.5rem;
+  @include small(){
+    gap: 1rem;
+  }
+  
+ 
+
+}
+
+.auth-title {
+  color: $bluewhite;
+  font-size: 1rem;
+  font-family: neuelight;
+  padding-left: 1em;
+  margin-bottom: 1.5rem;
+  letter-spacing: .8px;
+  @include small(){
+    font-size: .9rem;
+
+    }
+
+
+}
+.auth-option {
+  background-color: rgba(253, 253, 255, 0.123);
+  backdrop-filter: blur(1rem);
+  border-radius: 30px;
+  padding: 1em 2em;
+  width: 50vw;
+  color: $bluewhite;
+  cursor: pointer;
+
+  h1{
+    font-family: neuelight;
+    font-weight: 500;
+    font-size: 1.5rem;
+    letter-spacing: .4px;
+    line-height: 1.7;
+  }
+
+  @include small(){
+    width: 90vw;
+    padding: .5em 2em;
+
+    h1{
+      font-size: 1.3rem;
+
+    }
+  
+  }
+
+  
+}
+
+/*author*/
+
+
+/*user view*/
+.user-view {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: $backblue;
+}
+
+/* user view end*/
